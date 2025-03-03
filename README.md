@@ -78,9 +78,3 @@ The game uses an **event-based input system** that:
 ## 👏 Credits
 - **_LostboiSurviveA1one_** made this 
 - Built using Unity Engine
-- Special thanks to [Instructor names] for guidance and support
-
-## 📋 Version Control
-- **Proper Git history maintained** throughout development
-- Regular commits with descriptive messages
-- Organized branch structure for feature development
