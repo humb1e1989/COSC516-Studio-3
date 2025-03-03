@@ -1,4 +1,4 @@
-# 🎮 **Third Person Controller Game _COSC516 Studio 3_**
+# 🎮 **Third Person Controller Game - _COSC516 Studio 3_**
 
 ## 🎬 Video Demo
 [Insert link to your demo video here]
