@@ -1,7 +1,9 @@
 # 🎮 **Third Person Controller Game - _COSC516 Studio 3_**
 
 ## 🎬 Video Demo
-[Insert link to your demo video here]
+
+<video src="https://github.com/user-attachments/assets/b9d0ecf6-2680-4dce-82ce-85ce7edc4430"></video>
+_Screenshot of the game in action_
 
 ## 📝 Overview
 This project implements a 3D third-person platformer game using Unity. The game features a **character controller** that allows the player to navigate through a **procedurally generated environment**, collecting coins while using platforming mechanics such as **double jumping** to reach higher areas.
