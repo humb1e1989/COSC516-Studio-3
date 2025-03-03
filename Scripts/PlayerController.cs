@@ -169,6 +169,33 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //private void CheckGrounded()
+    //{
+    //    if (col == null)
+    //    {
+    //        col = GetComponent<CapsuleCollider>();
+    //        if (col == null) return;
+    //    }
+
+    //    // 获取胶囊体底部的位置
+    //    float capsuleHalfHeight = col.height * 0.5f;
+    //    Vector3 checkPosition = transform.position - new Vector3(0, capsuleHalfHeight - 0.1f, 0);
+
+    //    // 使用射线检测地面
+    //    float rayDistance = groundCheckDistance;
+
+    //    bool wasGrounded = isGrounded;
+    //    isGrounded = Physics.Raycast(checkPosition, Vector3.down, rayDistance, groundLayer);
+
+    //    // 如果刚刚着陆
+    //    if (!wasGrounded && isGrounded)
+    //    {
+    //        jumpCount = 0; // 重置跳跃计数
+    //        canDoubleJump = false; // 重置二段跳状态
+    //        Debug.Log("Just landed - reset jump variables");
+    //    }
+    //}
+
     private void CheckGrounded()
     {
         if (col == null)
@@ -181,18 +208,20 @@ public class PlayerController : MonoBehaviour
         float capsuleHalfHeight = col.height * 0.5f;
         Vector3 checkPosition = transform.position - new Vector3(0, capsuleHalfHeight - 0.1f, 0);
 
-        // 使用射线检测地面
+        // 使用射线检测任何碰撞体
         float rayDistance = groundCheckDistance;
 
         bool wasGrounded = isGrounded;
-        isGrounded = Physics.Raycast(checkPosition, Vector3.down, rayDistance, groundLayer);
+
+        // 检测所有碰撞体，不限于特定层
+        isGrounded = Physics.Raycast(checkPosition, Vector3.down, rayDistance);
 
         // 如果刚刚着陆
         if (!wasGrounded && isGrounded)
         {
             jumpCount = 0; // 重置跳跃计数
             canDoubleJump = false; // 重置二段跳状态
-            Debug.Log("Just landed - reset jump variables");
+            Debug.Log("Just landed on something - reset jump variables");
         }
     }
 
